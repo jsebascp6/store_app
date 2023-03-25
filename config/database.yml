@@ -8,3 +8,8 @@ development:
   host: postgres
   username: postgres
   port: 5432
+test:
+  <<: *default
+  database: store_test
+  host: postgres
+  username: postgres
