@@ -241,7 +241,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-  faraday
+  faraday (~> 2.7.4)
   importmap-rails
   jbuilder
   pg (~> 1.1)
