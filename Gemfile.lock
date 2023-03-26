@@ -89,12 +89,27 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     erubi (1.12.0)
+    erubis (2.7.0)
     faraday (2.7.4)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    haml-rails (2.1.0)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6)
+      railties (>= 5.1)
+    html2haml (2.3.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -189,11 +204,14 @@ GEM
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
     ruby2_keywords (0.0.5)
+    ruby_parser (3.20.0)
+      sexp_processor (~> 4.16)
     rubyzip (2.3.2)
     selenium-webdriver (4.8.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sexp_processor (4.16.1)
     shoulda (4.0.0)
       shoulda-context (~> 2.0)
       shoulda-matchers (~> 4.0)
@@ -209,7 +227,9 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    temple (0.10.0)
     thor (1.2.1)
+    tilt (2.1.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -242,6 +262,8 @@ DEPENDENCIES
   capybara
   debug
   faraday (~> 2.7.4)
+  haml-rails
+  html2haml
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -261,4 +283,4 @@ RUBY VERSION
    ruby 3.0.5p211
 
 BUNDLED WITH
-   2.3.20
+   2.4.9

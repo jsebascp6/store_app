@@ -16,12 +16,11 @@ RUN apt-get install -y iproute2
 RUN apt-get update && \
   apt-get install -qq -y --no-install-recommends cron && \
   rm -rf /var/lib/apt/lists/*
-# Changes localtime to Singapore
 RUN cp /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 RUN mkdir /store
 WORKDIR /store
 COPY Gemfile /store/Gemfile
 COPY Gemfile.lock /store/Gemfile.lock
 RUN bundle install
+RUN gem install bundler
 ADD . /store
-CMD bash -c "rm -f tmp/pids/server.pid && rails s -p 3000 -b '0.0.0.0'"
